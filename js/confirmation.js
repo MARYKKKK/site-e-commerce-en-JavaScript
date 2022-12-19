@@ -15,7 +15,7 @@ fetch('http://localhost:3000/api/products/' + url.searchParams.get('id'))
 function displayProduct(product){
     // On récupère les éléments du DOM
     const title = document.querySelector('#title')
-    const price = document.querySelector('#price')
+    // const price = document.querySelector('#price')
     const description = document.querySelector('#description')
     const image = document.querySelector('.item__img')
     const colors = document.querySelector('#colors')

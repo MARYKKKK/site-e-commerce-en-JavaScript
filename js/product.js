@@ -1,6 +1,8 @@
 // On parse l'URL pour en déduire le paramètre id
 const url = new URL(window.location.href);
 
+
+
 // On appel l'API pour récupérer les informations du produit
 fetch('http://localhost:3000/api/products/' + url.searchParams.get('id'))
     .then(function(res){
@@ -69,6 +71,7 @@ function addToCartEvent(product){
     if(productExists){
         productExists.quantity += product.quantity
     } else {
+        delete product.price
         cart.push(product)
     }
 

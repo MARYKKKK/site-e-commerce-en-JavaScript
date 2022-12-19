@@ -90,7 +90,7 @@ function validateLastName(form) {
 }
 
 function validateAddress(form) {
-    const regexName = /^[a-zA-Z\s]{5,50}$/g;
+    const regexName = /^[0-9a-zA-Z\s]{5,50}$/g;
     const address = form.address.value
     const addressErrorMsg = document.querySelector('#addressErrorMsg')
     addressErrorMsg.innerHTML = ''
@@ -154,20 +154,7 @@ function validateForm(form) {
 }
 
 function calculateTotal() {
-    /*const cartTotals = cart
-        .map(function(article){
-            return article.price * article.quantity
-        })
-        .reduce(function(total, current){
-            return total + current
-        }, 0)*/
-
-    /*const cartTotals = cart
-        .reduce(function(total, current){
-            return total + (current.price * current.quantity)
-        }, 0)
-    */
-
+    
     let total = 0;
     for (let i = 0; i < cart.length; i++) {
         const article = cart[i]

@@ -91,7 +91,7 @@ function validateLastName(form) {
 }
 
 function validateAddress(form) {
-    const regexName = /^[a-zA-Z\s]{5,50}$/g;
+    const regexName = /^[0-9a-zA-Z\s]{5,50}$/g;
     const address = form.address.value
     const addressErrorMsg = document.querySelector('#addressErrorMsg')
     addressErrorMsg.innerHTML = ''
